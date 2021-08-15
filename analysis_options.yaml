@@ -28,7 +28,9 @@ linter:
     prefer_const_constructors: false
     sized_box_for_whitespace: false
     avoid_positional_boolean_parameters: false
+    avoid_redundant_argument_values: false
 
     # To prevent warnings in generated files
     # prefer_final_locals: false
     type_annotate_public_apis: false
+    constant_identifier_names: false

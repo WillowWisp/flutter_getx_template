@@ -1,4 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_getx_template/common/translations/locale_keys.g.dart';
+import 'package:flutter_getx_template/common/widgets/app_button.dart';
 import 'package:flutter_getx_template/modules/app_getview/app_getview.dart';
 import 'package:flutter_getx_template/modules/pages/splash_page/splash_page_controller.dart';
 import 'package:flutter_getx_template/modules/pages/splash_page/splash_page_controller_impl.dart';
@@ -9,7 +12,7 @@ class SplashPage extends AppGetView<SplashPageController> {
       : super(
           key: key,
           initialController: SplashPageControllerImpl(
-            locationService: Get.find(),
+            localizationService: Get.find(),
           ),
         );
 
@@ -20,22 +23,40 @@ class SplashPage extends AppGetView<SplashPageController> {
         title: Text('Splash Page'),
       ),
       body: Center(
-        child: Obx(
-          () {
-            // Listen to count
-            final int count = controller.count;
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            // Localizations Example
+            Text(tr(LocaleKeys.hello, args: ['Willow'])),
+            AppButton(
+              onPressed: () {
+                controller.toggleLanguage();
+              },
+              child: Text('Switch Language'),
+            ),
+            SizedBox(height: 10),
+            // GetX's Obx Example
+            Obx(
+              () {
+                // Listen to count
+                final int count = controller.count;
 
-            return Text(
-              count.toString(),
-            );
-          },
+                return Text(
+                  count.toString(),
+                );
+              },
+            ),
+            AppButton(
+              onPressed: () {
+                controller.increaseCount();
+              },
+              child: Text(
+                tr(LocaleKeys.btn_increase),
+              ),
+            ),
+          ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          controller.increaseCount();
-        },
-        child: Icon(Icons.add),
       ),
     );
   }

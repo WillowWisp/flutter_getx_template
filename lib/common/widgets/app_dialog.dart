@@ -184,7 +184,6 @@ class _AppDialogState extends State<AppDialog> {
         Expanded(
           child: AppButton(
             onPressed: action.onPressed,
-            semanticLabel: action.text,
             borderRadius: BorderRadius.circular(4),
             btnColor: action.btnColor,
             textColor: action.txtColor,

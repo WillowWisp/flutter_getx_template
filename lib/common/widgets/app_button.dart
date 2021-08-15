@@ -7,7 +7,6 @@ enum AppButtonType {
 
 class AppButton extends StatelessWidget {
   final void Function()? onPressed;
-  final String semanticLabel;
   final double height;
   final Color? btnColor;
   final Color? textColor;
@@ -17,7 +16,6 @@ class AppButton extends StatelessWidget {
 
   const AppButton({
     Key? key,
-    required this.semanticLabel,
     this.onPressed,
     this.height = 40,
     this.btnColor,

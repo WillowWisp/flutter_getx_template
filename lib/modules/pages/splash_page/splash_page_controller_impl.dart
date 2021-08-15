@@ -1,14 +1,15 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:get/get.dart';
-import 'package:flutter_getx_template/data/services/location/location_service.dart';
+import 'package:flutter_getx_template/data/services/localization/localization_service.dart';
 import 'package:flutter_getx_template/modules/pages/splash_page/splash_page_controller.dart';
 
 class SplashPageControllerImpl extends GetxController
     implements SplashPageController {
-  final LocationService _locationService;
+  final LocalizationService _localizationService;
 
   SplashPageControllerImpl({
-    required LocationService locationService,
-  }) : _locationService = locationService;
+    required LocalizationService localizationService,
+  }) : _localizationService = localizationService;
 
   final Rx<int> _count = Rx(0);
   @override
@@ -17,9 +18,6 @@ class SplashPageControllerImpl extends GetxController
   @override
   Future<void> onInit() async {
     super.onInit();
-
-    print('onInit Splash');
-    _locationService.getPosition();
   }
 
   @override
@@ -34,6 +32,17 @@ class SplashPageControllerImpl extends GetxController
     print('onClose Splash');
 
     super.onClose();
+  }
+
+  @override
+  void toggleLanguage() {
+    SupportedLanguage language;
+    if (Get.context?.locale.languageCode == 'en') {
+      language = SupportedLanguage.vi;
+    } else {
+      language = SupportedLanguage.en;
+    }
+    _localizationService.switchLanguage(language);
   }
 
   @override
