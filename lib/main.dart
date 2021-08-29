@@ -29,10 +29,10 @@ Future<void> mainDelegate() async {
     DevicePreview(
       enabled: false,
       builder: (_) => EasyLocalization(
-        supportedLocales: [Locale('en', 'US'), Locale('vi', 'VN')],
+        supportedLocales: [Locale('en'), Locale('vi')],
         path: AppAssets.translationsFolder,
-        fallbackLocale: Locale('en', 'US'),
-        startLocale: Locale('vi', 'VN'),
+        fallbackLocale: Locale('en'),
+        saveLocale: false,
         child: MyApp(),
       ),
     ),
@@ -47,9 +47,8 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      // getPages: AppPages.pages,
-      // initialRoute: AppRoutes.splash,
-      home: SplashPage(),
+      getPages: AppPages.pages,
+      initialRoute: AppRoutes.splash,
       navigatorObservers: [AppRouteObserver()],
       builder: (context, child) {
         final Widget child1 = EasyLoading.init()(context, child);

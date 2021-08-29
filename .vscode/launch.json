@@ -9,28 +9,72 @@
       "request": "launch",
       "type": "dart",
       "flutterMode": "debug",
-      "program": "lib/main_dev.dart"
+      "program": "lib/main_dev.dart",
+      "args": ["--flavor", "dev"]
     },
     {
       "name": "Run Debug: Stag",
       "request": "launch",
       "type": "dart",
       "flutterMode": "debug",
-      "program": "lib/main_stag.dart"
+      "program": "lib/main_stag.dart",
+      "args": ["--flavor", "stag"]
     },
     {
       "name": "Run Debug: Prod",
       "request": "launch",
       "type": "dart",
       "flutterMode": "debug",
-      "program": "lib/main_prod.dart"
+      "program": "lib/main_prod.dart",
+      "args": ["--flavor", "prod"]
     },
     {
       "name": "Run Profile: Dev",
       "request": "launch",
       "type": "dart",
       "flutterMode": "profile",
-      "program": "lib/main_dev.dart"
+      "program": "lib/main_dev.dart",
+      "args": ["--flavor", "dev"]
+    },
+    {
+      "name": "Run Profile: Stag",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile",
+      "program": "lib/main_stag.dart",
+      "args": ["--flavor", "stag"]
+    },
+    {
+      "name": "Run Profile: Prod",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile",
+      "program": "lib/main_prod.dart",
+      "args": ["--flavor", "prod"]
+    },
+    {
+      "name": "Run Release: Dev",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release",
+      "program": "lib/main_dev.dart",
+      "args": ["--flavor", "dev"]
+    },
+    {
+      "name": "Run Release: Stag",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release",
+      "program": "lib/main_stag.dart",
+      "args": ["--flavor", "stag"]
+    },
+    {
+      "name": "Run Release: Prod",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release",
+      "program": "lib/main_prod.dart",
+      "args": ["--flavor", "prod"]
     }
   ]
 }
