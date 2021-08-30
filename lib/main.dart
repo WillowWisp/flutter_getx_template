@@ -2,9 +2,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_getx_template/common/config/app_assets.dart';
-import 'package:flutter_getx_template/modules/pages/splash_page/splash_page.dart';
 import 'package:get/get.dart';
 import 'package:flutter_getx_template/data/apis/setup_clients.dart';
 import 'package:flutter_getx_template/data/repositories/setup_repositories.dart';
@@ -51,8 +49,8 @@ class MyApp extends StatelessWidget {
       initialRoute: AppRoutes.splash,
       navigatorObservers: [AppRouteObserver()],
       builder: (context, child) {
-        final Widget child1 = EasyLoading.init()(context, child);
-        final Widget child2 = DevicePreview.appBuilder(context, child1);
+        // final Widget child1 = EasyLoading.init()(context, child);
+        final Widget child2 = DevicePreview.appBuilder(context, child);
 
         return child2;
       },

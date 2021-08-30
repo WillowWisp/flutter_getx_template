@@ -1,19 +1,19 @@
-import 'package:flutter_easyloading/flutter_easyloading.dart';
+// import 'package:flutter_easyloading/flutter_easyloading.dart';
 
-class LoadingViewUtils {
-  /// show loading and return the dialog
-  static Future<void> showLoading({String message = 'Please wait...'}) async {
-    // EasyLoading.instance
-    //   ..backgroundColor = ThemeColorUtils.getOnSecondary(Get.overlayContext!)
-    //   ..textColor = ThemeColorUtils.getSecondary(Get.overlayContext!);
+// class LoadingViewUtils {
+//   /// show loading and return the dialog
+//   static Future<void> showLoading({String message = 'Please wait...'}) async {
+//     // EasyLoading.instance
+//     //   ..backgroundColor = ThemeColorUtils.getOnSecondary(Get.overlayContext!)
+//     //   ..textColor = ThemeColorUtils.getSecondary(Get.overlayContext!);
 
-    await EasyLoading.show(
-      status: '読み込み中...',
-      maskType: EasyLoadingMaskType.black,
-    );
-  }
+//     await EasyLoading.show(
+//       status: '読み込み中...',
+//       maskType: EasyLoadingMaskType.black,
+//     );
+//   }
 
-  static Future<void> hideLoading() async {
-    await EasyLoading.dismiss();
-  }
-}
+//   static Future<void> hideLoading() async {
+//     await EasyLoading.dismiss();
+//   }
+// }

@@ -38,6 +38,7 @@ class AppButton extends StatelessWidget {
     final onPrimaryColor = textColor ?? Colors.white;
 
     return type == AppButtonType.solid
+        // ignore: deprecated_member_use
         ? FlatButton(
             materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
             onPressed: onPressed,
@@ -50,6 +51,7 @@ class AppButton extends StatelessWidget {
             ),
             child: child,
           )
+        // ignore: deprecated_member_use
         : OutlineButton(
             materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
             onPressed: onPressed,
