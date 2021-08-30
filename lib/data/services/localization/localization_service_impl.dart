@@ -4,15 +4,14 @@ import 'package:flutter_getx_template/data/services/localization/localization_se
 import 'package:get/get.dart';
 
 const Map<SupportedLanguage, Locale> _languageWithLocalMap = {
-  SupportedLanguage.en: Locale('en', 'US'),
-  SupportedLanguage.vi: Locale('vi', 'VN'),
+  SupportedLanguage.en: Locale('en'),
+  SupportedLanguage.vi: Locale('vi'),
 };
 
 class LocalizationServiceImpl implements LocalizationService {
   @override
   void switchLanguage(SupportedLanguage language) {
-    final Locale foundLocale =
-        _languageWithLocalMap[language] ?? Locale('en', 'US');
+    final Locale foundLocale = _languageWithLocalMap[language] ?? Locale('en');
 
     final context = Get.context;
 

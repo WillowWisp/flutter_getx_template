@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_getx_template/common/config/environment.dart';
 import 'package:flutter_getx_template/common/translations/locale_keys.g.dart';
 import 'package:flutter_getx_template/common/widgets/app_button.dart';
 import 'package:flutter_getx_template/modules/app_getview/app_getview.dart';
@@ -54,6 +55,10 @@ class SplashPage extends AppGetView<SplashPageController> {
               child: Text(
                 tr(LocaleKeys.btn_increase),
               ),
+            ),
+            // Environment
+            Text(
+              EnvironmentUtil.getEnvironment().toString(),
             ),
           ],
         ),
