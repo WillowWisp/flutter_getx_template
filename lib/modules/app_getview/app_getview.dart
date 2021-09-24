@@ -25,7 +25,14 @@ class _AppGetViewState<T> extends State<AppGetView<T>> {
   void initState() {
     super.initState();
 
-    Get.put<T>(widget.initialController, tag: _tag);
+    Get.put<T>(widget.initialController, tag: _tag, permanent: true);
+  }
+
+  @override
+  void dispose() {
+    Get.delete<T>(tag: _tag, force: true);
+
+    super.dispose();
   }
 
   @override
