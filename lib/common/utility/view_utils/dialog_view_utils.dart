@@ -1,5 +1,5 @@
+import 'package:flutter_getx_template/views/widgets/app_dialog.dart';
 import 'package:get/get.dart';
-import 'package:flutter_getx_template/common/widgets/app_dialog.dart';
 
 class DialogViewUtils {
   static Future<bool> showConfirmDialog({

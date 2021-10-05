@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_getx_template/common/config/environment.dart';
-import 'package:flutter_getx_template/data/apis/rest_client.dart';
+import 'package:flutter_getx_template/data_access/apis/rest_client.dart';
 import 'package:get/get.dart';
 
 void setupRestClient() {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_getx_template/common/widgets/app_button.dart';
+import 'package:flutter_getx_template/views/widgets/app_button.dart';
 import 'package:get/get.dart';
 
 const double horizontalPadding = 16;

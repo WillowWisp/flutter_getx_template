@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_getx_template/data_access/dtos/todo/todo_dto.dart';
 import 'package:retrofit/retrofit.dart';
-import 'package:flutter_getx_template/data/dtos/todo/todo_dto.dart';
 
 part 'rest_client.g.dart';
 

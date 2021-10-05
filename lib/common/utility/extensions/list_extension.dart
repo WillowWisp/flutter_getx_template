@@ -38,7 +38,7 @@ extension ListExtension<T> on Iterable<T> {
     return result;
   }
 
-  /// check whether `elements` are the same as current list or not, that means every element of A appears in B
+  /// Check whether `elements` are the same as current list or not, that means every element of A appears in B
   /// and every element of B appears in A
   bool isEqual(Iterable<T> elements) {
     return every((x) => elements.contains(x)) &&

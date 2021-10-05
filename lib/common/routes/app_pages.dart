@@ -1,5 +1,5 @@
+import 'package:flutter_getx_template/views/modules/pages/splash_page/splash_page.dart';
 import 'package:get/get.dart';
-import 'package:flutter_getx_template/modules/pages/splash_page/splash_page.dart';
 
 part 'app_routes.dart';
 

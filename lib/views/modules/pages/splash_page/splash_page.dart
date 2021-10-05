@@ -2,10 +2,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_template/common/config/environment.dart';
 import 'package:flutter_getx_template/common/translations/locale_keys.g.dart';
-import 'package:flutter_getx_template/common/widgets/app_button.dart';
-import 'package:flutter_getx_template/modules/app_getview/app_getview.dart';
-import 'package:flutter_getx_template/modules/pages/splash_page/splash_page_controller.dart';
-import 'package:flutter_getx_template/modules/pages/splash_page/splash_page_controller_impl.dart';
+import 'package:flutter_getx_template/views/miscs/app_getview/app_getview.dart';
+import 'package:flutter_getx_template/views/modules/pages/splash_page/splash_page_controller.dart';
+import 'package:flutter_getx_template/views/modules/pages/splash_page/splash_page_controller_impl.dart';
+import 'package:flutter_getx_template/views/widgets/app_button.dart';
 import 'package:get/get.dart';
 
 class SplashPage extends AppGetView<SplashPageController> {

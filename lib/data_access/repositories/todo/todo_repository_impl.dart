@@ -1,6 +1,6 @@
-import 'package:flutter_getx_template/data/apis/rest_client.dart';
-import 'package:flutter_getx_template/data/dtos/todo/todo_dto.dart';
-import 'package:flutter_getx_template/data/repositories/todo/todo_repository.dart';
+import 'package:flutter_getx_template/data_access/apis/rest_client.dart';
+import 'package:flutter_getx_template/data_access/dtos/todo/todo_dto.dart';
+import 'package:flutter_getx_template/data_access/repositories/todo/todo_repository.dart';
 
 class TodoRepositoryImpl implements TodoRepository {
   final RestClient _restClient;

@@ -3,12 +3,12 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_getx_template/common/config/app_assets.dart';
+import 'package:flutter_getx_template/common/routes/app_pages.dart';
+import 'package:flutter_getx_template/data_access/apis/setup_clients.dart';
+import 'package:flutter_getx_template/data_access/repositories/setup_repositories.dart';
+import 'package:flutter_getx_template/data_access/services/setup_services.dart';
+import 'package:flutter_getx_template/views/miscs/app_route_observer/app_route_observer.dart';
 import 'package:get/get.dart';
-import 'package:flutter_getx_template/data/apis/setup_clients.dart';
-import 'package:flutter_getx_template/data/repositories/setup_repositories.dart';
-import 'package:flutter_getx_template/data/services/setup_services.dart';
-import 'package:flutter_getx_template/modules/app_route_observer/app_route_observer.dart';
-import 'package:flutter_getx_template/routes/app_pages.dart';
 
 Future<void> mainDelegate() async {
   WidgetsFlutterBinding.ensureInitialized();

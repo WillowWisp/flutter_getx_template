@@ -1,5 +1,5 @@
-import 'package:json_annotation/json_annotation.dart';
 import 'package:flutter_getx_template/common/utility/enums.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 part 'todo_dto.g.dart';
 

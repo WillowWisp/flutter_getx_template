@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_getx_template/data/services/localization/localization_service.dart';
+import 'package:flutter_getx_template/data_access/services/localization/localization_service.dart';
 import 'package:get/get.dart';
 
 const Map<SupportedLanguage, Locale> _languageWithLocalMap = {
