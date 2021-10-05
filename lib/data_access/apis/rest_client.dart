@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_getx_template/data_access/dtos/todo/todo_dto.dart';
+import 'package:flutter_getx_template/data_access/dtos/product/product_dto.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'rest_client.g.dart';
@@ -10,8 +10,13 @@ abstract class RestClient {
 
   // - Notifications
 
-  @POST('todos')
-  Future<List<TodoDto>> getTodoList();
+  @GET('products')
+  Future<List<ProductDto>> getProductList();
+
+  @GET('products/{id}')
+  Future<ProductDto> getProduct(
+    @Path('id') String id,
+  );
 
 // * Example
 

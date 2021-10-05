@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_getx_template/common/config/app_assets.dart';
 
 class AppNetworkImage extends StatelessWidget {
   final String? imageUrl;
@@ -12,7 +13,7 @@ class AppNetworkImage extends StatelessWidget {
   const AppNetworkImage({
     Key? key,
     this.imageUrl,
-    this.defaultImageAsset = 'AppAssets.defaultImage',
+    this.defaultImageAsset = AppAssetsImage.defaultImage,
     this.width,
     this.height,
     this.fit,

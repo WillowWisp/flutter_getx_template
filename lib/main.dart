@@ -6,7 +6,9 @@ import 'package:flutter_getx_template/common/config/app_assets.dart';
 import 'package:flutter_getx_template/common/routes/app_pages.dart';
 import 'package:flutter_getx_template/data_access/apis/setup_clients.dart';
 import 'package:flutter_getx_template/data_access/repositories/setup_repositories.dart';
+import 'package:flutter_getx_template/data_access/services/localization/localization_service.dart';
 import 'package:flutter_getx_template/data_access/services/setup_services.dart';
+import 'package:flutter_getx_template/views/controllers/setup_controllers.dart';
 import 'package:flutter_getx_template/views/miscs/app_route_observer/app_route_observer.dart';
 import 'package:get/get.dart';
 
@@ -17,6 +19,7 @@ Future<void> mainDelegate() async {
   setupRestClient();
   setupRepositories();
   setupServices();
+  setupControllers();
 
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
@@ -27,9 +30,10 @@ Future<void> mainDelegate() async {
     DevicePreview(
       enabled: false,
       builder: (_) => EasyLocalization(
-        supportedLocales: [Locale('en'), Locale('vi')],
+        supportedLocales:
+            SupportedLanguage.values.map((lang) => lang.getLocale()).toList(),
         path: AppAssets.translationsFolder,
-        fallbackLocale: Locale('en'),
+        fallbackLocale: SupportedLanguage.en.getLocale(),
         saveLocale: false,
         child: MyApp(),
       ),
@@ -48,6 +52,7 @@ class MyApp extends StatelessWidget {
       getPages: AppPages.pages,
       initialRoute: AppRoutes.splash,
       navigatorObservers: [AppRouteObserver()],
+      theme: ThemeData(),
       builder: (context, child) {
         // final Widget child1 = EasyLoading.init()(context, child);
         final Widget child2 = DevicePreview.appBuilder(context, child);

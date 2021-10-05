@@ -14,13 +14,13 @@ class EnvironmentConfigs {
 
 const Map<Environment, EnvironmentConfigs> _environmentWithConfigsMap = {
   Environment.dev: EnvironmentConfigs(
-    apiUrl: 'http://localhost:3000/',
+    apiUrl: 'https://fakestoreapi.com/',
   ),
   Environment.stag: EnvironmentConfigs(
-    apiUrl: 'https://google.com/',
+    apiUrl: 'https://fakestoreapi.com/',
   ),
   Environment.prod: EnvironmentConfigs(
-    apiUrl: 'https://google.com/',
+    apiUrl: 'https://fakestoreapi.com/',
   ),
 };
 

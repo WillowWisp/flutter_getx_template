@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 abstract class LocalizationService {
   void switchLanguage(SupportedLanguage language);
 }
@@ -5,4 +7,15 @@ abstract class LocalizationService {
 enum SupportedLanguage {
   en,
   vi,
+}
+
+extension SupportedLanguageExt on SupportedLanguage {
+  Locale getLocale() {
+    switch (this) {
+      case SupportedLanguage.en:
+        return Locale('en');
+      case SupportedLanguage.vi:
+        return Locale('vi');
+    }
+  }
 }
