@@ -30,21 +30,48 @@ class CartPage extends StatelessWidget {
               );
             }),
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Row(
+          Container(
+            padding: EdgeInsets.symmetric(
+              horizontal: 15,
+              vertical: 10,
+            ),
+            child: Obx(() {
+              final cartItemList = cartController.cartItemList;
+              final totalCartItem = cartController.totalCartItem;
+
+              double totalCost = 0;
+              for (final cartItem in cartItemList) {
+                totalCost += cartItem.product.price * cartItem.quantity;
+              }
+
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Expanded(
-                    child: Text('Total'),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text('Total'),
+                      ),
+                      Text(
+                        '\$${totalCost.toStringAsFixed(2)}',
+                      ),
+                    ],
                   ),
-                  Text('\$214.85'),
+                  SizedBox(height: 5),
+                  AppButton(
+                    onPressed: totalCartItem > 0
+                        ? () {
+                            print('Check out');
+                          }
+                        : null,
+                    child: Text('Checkout'),
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).padding.bottom,
+                  ),
                 ],
-              ),
-              AppButton(
-                child: Text('Checkout'),
-              ),
-            ],
+              );
+            }),
           ),
         ],
       ),
@@ -56,6 +83,8 @@ class CartPage extends StatelessWidget {
 
     return Container(
       color: Colors.white,
+      margin: EdgeInsets.only(top: 10),
+      padding: EdgeInsets.symmetric(vertical: 10),
       child: Row(
         children: [
           Container(

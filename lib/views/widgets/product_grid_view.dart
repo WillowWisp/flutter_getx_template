@@ -31,6 +31,7 @@ class ProductGridView extends StatelessWidget {
         itemCount: productList.length,
         itemBuilder: (context, index) {
           final product = productList[index];
+
           return _buildProductItem(product);
         },
       ),
@@ -93,7 +94,14 @@ class ProductGridView extends StatelessWidget {
             right: 0,
             bottom: 0,
             child: Obx(() {
-              final quantity = cartController.getProductQuantity(product.id);
+              // Get product quantity in the cart
+              final cartItemList = cartController.cartItemList;
+
+              final foundCartItem = cartItemList.firstWhereOrNull(
+                (cartItem) => cartItem.product.id == product.id,
+              );
+              final quantity = foundCartItem?.quantity ?? 0;
+
               final bool hasInCart = quantity > 0;
 
               return Column(

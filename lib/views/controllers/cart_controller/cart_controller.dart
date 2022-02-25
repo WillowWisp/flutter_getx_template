@@ -6,8 +6,6 @@ abstract class CartController {
 
   void addItemToCart(ProductDto product);
   void removeItemFromCart(int productId);
-
-  int getProductQuantity(int productId);
 }
 
 class CartItemModel {

@@ -51,16 +51,4 @@ class CartControllerImpl extends GetxController implements CartController {
 
     _cartItemList.refresh();
   }
-
-  @override
-  int getProductQuantity(int productId) {
-    final foundCartItem = cartItemList
-        .firstWhereOrNull((cartItem) => cartItem.product.id == productId);
-
-    if (foundCartItem == null) {
-      return 0;
-    }
-
-    return foundCartItem.quantity;
-  }
 }
