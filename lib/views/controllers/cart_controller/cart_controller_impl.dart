@@ -1,4 +1,3 @@
-import 'package:flutter_getx_template/common/utility/extensions/list_extension.dart';
 import 'package:flutter_getx_template/data_access/dtos/product/product_dto.dart';
 import 'package:flutter_getx_template/views/controllers/cart_controller/cart_controller.dart';
 import 'package:get/get.dart';
