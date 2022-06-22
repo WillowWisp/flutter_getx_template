@@ -10,7 +10,7 @@ class ProductListPage extends AppGetView<ProductListPageController> {
   ProductListPage({Key? key})
       : super(
           key: key,
-          initialController: ProductListPageControllerImpl(
+          controllerRegister: (_) => ProductListPageControllerImpl(
             productRepository: Get.find(),
           ),
         );

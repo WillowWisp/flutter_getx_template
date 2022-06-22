@@ -12,7 +12,7 @@ class SplashPage extends AppGetView<SplashPageController> {
   SplashPage({Key? key})
       : super(
           key: key,
-          initialController: SplashPageControllerImpl(
+          controllerRegister: (_) => SplashPageControllerImpl(
             localizationService: Get.find(),
           ),
         );

@@ -12,6 +12,8 @@ import 'package:flutter_getx_template/views/controllers/setup_controllers.dart';
 import 'package:flutter_getx_template/views/miscs/app_route_observer/app_route_observer.dart';
 import 'package:get/get.dart';
 
+late final RouteObserver<PageRoute<dynamic>> appRouteObserver;
+
 Future<void> mainDelegate() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
@@ -20,6 +22,8 @@ Future<void> mainDelegate() async {
   setupRepositories();
   setupServices();
   setupControllers();
+
+  appRouteObserver = AppRouteObserver();
 
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
@@ -49,9 +53,9 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      getPages: AppPages.pages,
       initialRoute: AppRoutes.splash,
-      navigatorObservers: [AppRouteObserver()],
+      onGenerateRoute: AppRoutes.generateRoute,
+      navigatorObservers: [appRouteObserver],
       theme: ThemeData(),
       builder: (context, child) {
         // final Widget child1 = EasyLoading.init()(context, child);

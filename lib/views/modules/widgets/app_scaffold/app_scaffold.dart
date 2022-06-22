@@ -13,7 +13,7 @@ class AppScaffold extends AppGetView<AppScaffoldController> {
     required this.body,
   }) : super(
           key: key,
-          initialController: AppScaffoldControllerImpl(
+          controllerRegister: (_) => AppScaffoldControllerImpl(
             cartController: Get.find(),
           ),
         );

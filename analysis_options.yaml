@@ -34,3 +34,4 @@ linter:
     # prefer_final_locals: false
     type_annotate_public_apis: false
     constant_identifier_names: false
+    require_trailing_commas: false
