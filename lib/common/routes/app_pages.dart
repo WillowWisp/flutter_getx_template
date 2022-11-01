@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_getx_template/views/modules/pages/cart_page/cart_page.dart';
-import 'package:flutter_getx_template/views/modules/pages/product_list_page/product_list_page.dart';
-import 'package:flutter_getx_template/views/modules/pages/splash_page/splash_page.dart';
+import 'package:flutter_getx_template/views/widgets/pages/cart_page/cart_page.dart';
+import 'package:flutter_getx_template/views/widgets/pages/product_list_page/product_list_page.dart';
+import 'package:flutter_getx_template/views/widgets/pages/splash_page/splash_page.dart';
 import 'package:get/get.dart';
 
 abstract class AppRoutes {

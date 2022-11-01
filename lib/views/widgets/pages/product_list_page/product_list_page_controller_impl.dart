@@ -1,6 +1,6 @@
 import 'package:flutter_getx_template/data_access/dtos/product/product_dto.dart';
 import 'package:flutter_getx_template/data_access/repositories/product_repository/product_repository.dart';
-import 'package:flutter_getx_template/views/modules/pages/product_list_page/product_list_page_controller.dart';
+import 'package:flutter_getx_template/views/widgets/pages/product_list_page/product_list_page_controller.dart';
 import 'package:get/get.dart';
 
 class ProductListPageControllerImpl extends GetxController

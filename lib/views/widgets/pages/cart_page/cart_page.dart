@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_template/views/controllers/cart_controller/cart_controller.dart';
-import 'package:flutter_getx_template/views/modules/widgets/app_scaffold/app_scaffold.dart';
-import 'package:flutter_getx_template/views/widgets/app_button.dart';
-import 'package:flutter_getx_template/views/widgets/app_network_image.dart';
+import 'package:flutter_getx_template/views/widgets/common/app_button.dart';
+import 'package:flutter_getx_template/views/widgets/common/app_network_image.dart';
+import 'package:flutter_getx_template/views/widgets/common/app_scaffold/app_scaffold.dart';
 import 'package:get/get.dart';
 
 class CartPage extends StatelessWidget {

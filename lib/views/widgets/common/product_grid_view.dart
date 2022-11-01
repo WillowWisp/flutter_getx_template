@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_template/data_access/dtos/product/product_dto.dart';
 import 'package:flutter_getx_template/views/controllers/cart_controller/cart_controller.dart';
-import 'package:flutter_getx_template/views/widgets/app_network_image.dart';
+import 'package:flutter_getx_template/views/widgets/common/app_network_image.dart';
 import 'package:get/get.dart';
 
 const double _actionSize = 30;

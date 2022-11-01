@@ -1,4 +1,4 @@
-import 'package:flutter_getx_template/views/widgets/app_dialog.dart';
+import 'package:flutter_getx_template/views/widgets/common/app_dialog.dart';
 import 'package:get/get.dart';
 
 class DialogViewUtils {

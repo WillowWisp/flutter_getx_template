@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_getx_template/data_access/services/localization/localization_service.dart';
-import 'package:flutter_getx_template/views/modules/pages/splash_page/splash_page_controller.dart';
+import 'package:flutter_getx_template/views/widgets/pages/splash_page/splash_page_controller.dart';
 import 'package:get/get.dart';
 
 class SplashPageControllerImpl extends GetxController

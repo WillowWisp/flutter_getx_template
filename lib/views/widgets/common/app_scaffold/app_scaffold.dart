@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_template/views/controllers/cart_controller/cart_controller.dart';
 import 'package:flutter_getx_template/views/miscs/app_getview/app_getview.dart';
-import 'package:flutter_getx_template/views/modules/widgets/app_scaffold/app_scaffold_controller.dart';
-import 'package:flutter_getx_template/views/modules/widgets/app_scaffold/app_scaffold_controller_impl.dart';
+import 'package:flutter_getx_template/views/widgets/common/app_scaffold/app_scaffold_controller.dart';
+import 'package:flutter_getx_template/views/widgets/common/app_scaffold/app_scaffold_controller_impl.dart';
 import 'package:get/get.dart';
 
 class AppScaffold extends AppGetView<AppScaffoldController> {
