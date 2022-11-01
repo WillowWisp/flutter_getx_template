@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_template/common/config/environment.dart';
+import 'package:flutter_getx_template/common/routes/app_pages.dart';
 import 'package:flutter_getx_template/common/translations/locale_keys.g.dart';
 import 'package:flutter_getx_template/views/miscs/app_getview/app_getview.dart';
 import 'package:flutter_getx_template/views/modules/pages/splash_page/splash_page_controller.dart';
@@ -28,15 +29,16 @@ class SplashPage extends AppGetView<SplashPageController> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // Localizations Example
             Text(tr(LocaleKeys.hello, args: ['Willow'])),
             AppButton(
               onPressed: () {
                 controller.toggleLanguage();
               },
-              child: Text('Switch Language'),
+              child: Text(
+                'Switch Language',
+              ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 20),
             // GetX's Obx Example
             Obx(
               () {
@@ -52,10 +54,21 @@ class SplashPage extends AppGetView<SplashPageController> {
               onPressed: () {
                 controller.increaseCount();
               },
+              type: AppButtonType.outlined,
               child: Text(
                 tr(LocaleKeys.btn_increase),
               ),
             ),
+            SizedBox(height: 20),
+            AppButton(
+              onPressed: () {
+                Get.toNamed(AppRoutes.productList);
+              },
+              child: Text(
+                'Home Page',
+              ),
+            ),
+            SizedBox(height: 20),
             // Environment
             Text(
               EnvironmentUtil.getEnvironment().toString(),

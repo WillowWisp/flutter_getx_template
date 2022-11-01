@@ -16,23 +16,20 @@ class SplashPageControllerImpl extends GetxController
   @override
   int get count => _count.value;
 
-  @override
-  Future<void> onInit() async {
-    super.onInit();
-  }
+  // @override
+  // void onInit() {
+  //   super.onInit();
+  // }
 
-  @override
-  Future<void> onReady() async {
-    super.onReady();
+  // @override
+  // void onReady() {
+  //   super.onReady();
+  // }
 
-    await Future.delayed(Duration(milliseconds: 500));
-    Get.toNamed(AppRoutes.productList);
-  }
-
-  @override
-  Future<void> onClose() async {
-    super.onClose();
-  }
+  // @override
+  // void onClose() {
+  //   super.onClose();
+  // }
 
   @override
   void toggleLanguage() {

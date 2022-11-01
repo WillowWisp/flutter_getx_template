@@ -2,6 +2,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_getx_template/common/config/app_assets.dart';
 import 'package:flutter_getx_template/common/routes/app_pages.dart';
 import 'package:flutter_getx_template/data_access/apis/setup_clients.dart';
@@ -36,7 +37,7 @@ Future<void> mainDelegate() async {
       builder: (_) => EasyLocalization(
         supportedLocales:
             SupportedLanguage.values.map((lang) => lang.getLocale()).toList(),
-        path: AppAssets.translationsFolder,
+        path: AppAssetsTranslation.folder,
         fallbackLocale: SupportedLanguage.en.getLocale(),
         saveLocale: false,
         child: MyApp(),
@@ -56,10 +57,15 @@ class MyApp extends StatelessWidget {
       initialRoute: AppRoutes.splash,
       onGenerateRoute: AppRoutes.generateRoute,
       navigatorObservers: [appRouteObserver],
-      theme: ThemeData(),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.redAccent,
+        ),
+        splashFactory: InkRipple.splashFactory,
+      ),
       builder: (context, child) {
-        // final Widget child1 = EasyLoading.init()(context, child);
-        final Widget child2 = DevicePreview.appBuilder(context, child);
+        final Widget child1 = EasyLoading.init()(context, child);
+        final Widget child2 = DevicePreview.appBuilder(context, child1);
 
         return child2;
       },

@@ -1,9 +1,9 @@
-class AppAssets {
-  static const translationsFolder = 'assets/translations';
+class AppAssetsTranslation {
+  static const folder = 'assets/translations';
 }
 
 class AppAssetsImage {
-  static const imagesFolder = 'assets/images';
+  static const _folder = 'assets/images';
 
-  static const defaultImage = '$imagesFolder/default-image.jpg';
+  static const defaultImage = '$_folder/default-image.jpg';
 }

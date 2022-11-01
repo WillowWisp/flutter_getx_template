@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx_template/common/theme/app_colors.dart';
 
 enum AppButtonType {
   solid,
@@ -34,35 +35,31 @@ class AppButton extends StatelessWidget {
   }
 
   Widget _buildButton(BuildContext context) {
-    final primaryColor = btnColor ?? Theme.of(context).primaryColor;
-    final onPrimaryColor = textColor ?? Colors.white;
-
     return type == AppButtonType.solid
-        // ignore: deprecated_member_use
-        ? FlatButton(
-            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-            onPressed: onPressed,
-            color: primaryColor,
-            textColor: onPrimaryColor,
-            disabledColor: Theme.of(context).disabledColor,
-            disabledTextColor: onPrimaryColor,
-            shape: RoundedRectangleBorder(
-              borderRadius: borderRadius ?? BorderRadius.circular(5),
+        ? TextButton(
+            style: TextButton.styleFrom(
+              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              backgroundColor: btnColor ?? AppColors.of(context).primary,
+              primary: textColor ?? AppColors.of(context).onPrimary,
+              shape: RoundedRectangleBorder(
+                borderRadius: borderRadius ?? BorderRadius.circular(5),
+              ),
             ),
+            onPressed: onPressed,
             child: child,
           )
-        // ignore: deprecated_member_use
-        : OutlineButton(
-            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+        : OutlinedButton(
             onPressed: onPressed,
-            color: primaryColor,
-            borderSide: BorderSide(
-              width: 2,
-              color: primaryColor,
-            ),
-            textColor: primaryColor,
-            shape: RoundedRectangleBorder(
-              borderRadius: borderRadius ?? BorderRadius.circular(5),
+            style: OutlinedButton.styleFrom(
+              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              primary: textColor ?? AppColors.of(context).primary,
+              side: BorderSide(
+                width: 1,
+                color: btnColor ?? AppColors.of(context).primary,
+              ),
+              shape: RoundedRectangleBorder(
+                borderRadius: borderRadius ?? BorderRadius.circular(5),
+              ),
             ),
             child: child,
           );
