@@ -18,11 +18,11 @@ mixin LifecycleControllerMixin on GetxController
   }
 
   void _addLifecycleObserver() {
-    WidgetsBinding.instance!.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
   }
 
   void _removeLifecycleObserver() {
-    WidgetsBinding.instance!.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
   }
 
   void onAppPause() {}

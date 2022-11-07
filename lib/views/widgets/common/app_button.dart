@@ -40,7 +40,7 @@ class AppButton extends StatelessWidget {
             style: TextButton.styleFrom(
               tapTargetSize: MaterialTapTargetSize.shrinkWrap,
               backgroundColor: btnColor ?? AppColors.of(context).primary,
-              primary: textColor ?? AppColors.of(context).onPrimary,
+              foregroundColor: textColor ?? AppColors.of(context).onPrimary,
               shape: RoundedRectangleBorder(
                 borderRadius: borderRadius ?? BorderRadius.circular(5),
               ),
@@ -52,7 +52,7 @@ class AppButton extends StatelessWidget {
             onPressed: onPressed,
             style: OutlinedButton.styleFrom(
               tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-              primary: textColor ?? AppColors.of(context).primary,
+              foregroundColor: textColor ?? AppColors.of(context).primary,
               side: BorderSide(
                 width: 1,
                 color: btnColor ?? AppColors.of(context).primary,

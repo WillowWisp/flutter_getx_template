@@ -59,9 +59,10 @@ class MyApp extends StatelessWidget {
       navigatorObservers: [appRouteObserver],
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.redAccent,
+          seedColor: Colors.purple,
         ),
-        splashFactory: InkRipple.splashFactory,
+        useMaterial3: true,
+        splashFactory: InkSparkle.splashFactory,
       ),
       builder: (context, child) {
         final Widget child1 = EasyLoading.init()(context, child);
